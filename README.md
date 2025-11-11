@@ -83,7 +83,7 @@ Handler - INFO - Saga terminée avec succès ! Votre order_id = 1. Votre payment
 ```
 Ici, nous pouvons observer que les Handlers sont déjà en place, qu'ils s'appellent déjà les uns les autres et suivent une chorégraphie. Maintenant, vous devez leur faire exécuter les opérations nécessaires.
 
-> 📝 **NOTE** : Les logs peuvent parfois mettre entre 15 et 30 secondes à s'afficher en raison des délais de démarrage des services associés au Store Manager et de la file d'attente des événements dans Kafka. Soyez patient 🙂.
+> 📝 **NOTE** : Les logs peuvent parfois mettre entre 15 et 30 secondes à s'afficher en raison des délais de démarrage des services associés au Store Manager et de la file d'attente des événements dans Kafka. Soyez patient 🙂. Si vous préférez, vous pouvez utiliser le paramètre `log_to_file=True` dans une instance du Logger pour imprimer les logs dans un fichier supplémentaire dans Docker Desktop.
 
 ### 3. Implémentez les Handlers de stock
 Voici une résumé des Handlers de commandes et stocks utilisés pendant la Saga dans le dépôt `log430-labo8`. Chaque classe Handler représente une transition d'état, soit pour faire une opération ou pour faire sa compensation.
